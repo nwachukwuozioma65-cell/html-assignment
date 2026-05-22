@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Our Solar System Through Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .page-header, .page-footer {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .content-section {
+            margin-bottom: 3rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        caption {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        figure {
+            margin: 0;
+            text-align: center;
+        }
+        figcaption {
+            font-style: italic;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+        form div {
+            margin-bottom: 1rem;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="page-header">
+        <div style="font-size: 3rem;" aria-label="Logo">🪐</div>
+        <h1>Explore Our Solar System Through Data</h1>
+        <p>This page provides measurable data (quantity, density) about the solar system in a clear, data-driven way.</p>
+        <nav class="navigation">
+            <a href="#table-section">Explore Data</a> |
+            <a href="#contact">Contact us</a>
+        </nav>
+    </header>
+    <hr>
+
+    <!-- Main Content Section -->
+    <main class="page-content">
+
+        <!-- Video Section -->
+        <section class="content-section video-section">
+            <h2>How Planetary Data Helps Us Understand Space</h2>
+            <!-- Video element with autoplay, muted, and loop endlessly -->
+            <video width="800" height="450" autoplay muted loop controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+        <hr>
+
+        <!-- Image Section -->
+        <section class="content-section image-section">
+            <h2>Visualizing the Differences Between Planets</h2>
+            <!-- Semantic figure and figcaption container -->
+            <figure class="planet-figure">
+                <img src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                     alt="A composite image showing the planets of our solar system lined up." 
+                     width="800" height="400">
+                <figcaption>A visual comparison of the relative sizes and appearances of the eight planets in our solar system.</figcaption>
+            </figure>
+        </section>
+        <hr>
+
+        <!-- Table Section -->
+        <section id="table-section" class="content-section table-section">
+            <h2>Planetary Features at a Glance</h2>
+            <table class="data-table">
+                <!-- User requested caption -->
+                <caption>Students Performance Record</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Mass (10²⁴kg)</th>
+                        <th scope="col">Diameter (km)</th>
+                        <th scope="col">Density (kg/m³)</th>
+                        <th scope="col">Gravity (m/s²)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Mercury</th>
+                        <td>0.330</td>
+                        <td>4,879</td>
+                        <td>5429</td>
+                        <td>3.7</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Venus</th>
+                        <td>4.87</td>
+                        <td>12,104</td>
+                        <td>5243</td>
+                        <td>8.9</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Earth</th>
+                        <td>5.97</td>
+                        <td>12,756</td>
+                        <td>5514</td>
+                        <td>9.8</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Mars</th>
+                        <td>0.642</td>
+                        <td>6,792</td>
+                        <td>3934</td>
+                        <td>3.7</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Jupiter</th>
+                        <td>1898</td>
+                        <td>142,984</td>
+                        <td>1326</td>
+                        <td>23.1</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Saturn</th>
+                        <td>568</td>
+                        <td>120,536</td>
+                        <td>687</td>
+                        <td>9.0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Uranus</th>
+                        <td>86.8</td>
+                        <td>51,118</td>
+                        <td>1270</td>
+                        <td>8.7</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Neptune</th>
+                        <td>102</td>
+                        <td>49,528</td>
+                        <td>1638</td>
+                        <td>11.0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Pluto</th>
+                        <td>0.0130</td>
+                        <td>2,390</td>
+                        <td>1895</td>
+                        <td>0.7</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <hr>
+
+        <!-- Form Section -->
+        <section id="contact" class="content-section form-section">
+            <h2>Have Questions About Planetary Science?</h2>
+            <form action="#" method="POST" class="question-form">
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" minlength="10" maxlength="20" required>
+                    </div>
+                    <div>
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" maxlength="11" required>
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="place">Select a Place in New York</label>
+                        <select id="place" name="place">
+                            <option value="">--Please choose an option--</option>
+                            <option value="manhattan">Manhattan</option>
+                            <option value="brooklyn">Brooklyn</option>
+                            <option value="queens">Queens</option>
+                            <option value="bronx">The Bronx</option>
+                            <option value="staten_island">Staten Island</option>
+                            <option value="harlem">Harlem</option>
+                            <option value="soho">SoHo</option>
+                            <option value="tribeca">Tribeca</option>
+                            <option value="chelsea">Chelsea</option>
+                            <option value="greenwich">Greenwich Village</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="question">Your Question</label>
+                        <textarea id="question" name="question" rows="4" maxlength="100" required></textarea>
+                    </div>
+                    <button type="submit">Submit</button>
+                </fieldset>
+            </form>
+        </section>
+        <hr>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="page-footer">
+        <ul style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 15px; margin-bottom: 1rem;">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Sitemap</a></li>
+        </ul>
+        <p>&copy; 2026 Planetary Data Resource. For support, visit the community section of the LMS.</p>
+    </footer>
+
+</body>
+</html>
