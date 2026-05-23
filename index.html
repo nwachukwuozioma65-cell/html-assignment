@@ -13,6 +13,19 @@
             margin: 0 auto;
             padding: 20px;
         }
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #333;
+            color: #fff;
+            padding: 8px;
+            z-index: 100;
+            transition: top 0.2s;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
         .page-header, .page-footer {
             text-align: center;
             margin-bottom: 2rem;
@@ -44,7 +57,7 @@
         }
         figcaption {
             font-style: italic;
-            color: #666;
+            color: #333; /* Improved color contrast */
             margin-top: 0.5rem;
         }
         form div {
@@ -58,10 +71,49 @@
             width: 100%;
             padding: 8px;
             box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+        .navigation ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 1rem 0;
+        }
+        .navigation a {
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: bold;
+        }
+        .navigation a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
+
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Header Section -->
     <header class="page-header">
@@ -69,20 +121,22 @@
         <h1>Explore Our Solar System Through Data</h1>
         <p>This page provides measurable data (quantity, density) about the solar system in a clear, data-driven way.</p>
         <nav class="navigation">
-            <a href="#table-section">Explore Data</a> |
-            <a href="#contact">Contact us</a>
+            <ul>
+                <li><a href="#table-section">Explore Data</a></li>
+                <li><a href="#contact">Contact us</a></li>
+            </ul>
         </nav>
     </header>
     <hr>
 
     <!-- Main Content Section -->
-    <main class="page-content">
+    <main id="main-content" class="page-content">
 
         <!-- Video Section -->
         <section class="content-section video-section">
             <h2>How Planetary Data Helps Us Understand Space</h2>
             <!-- Video element with autoplay, muted, and loop endlessly -->
-            <video width="800" height="450" autoplay muted loop controls>
+            <video autoplay muted loop controls>
                 <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -106,8 +160,7 @@
         <section id="table-section" class="content-section table-section">
             <h2>Planetary Features at a Glance</h2>
             <table class="data-table">
-                <!-- User requested caption -->
-                <caption>Students Performance Record</caption>
+                <caption>Planetary Data Comparison</caption>
                 <thead>
                     <tr>
                         <th scope="col">Name</th>
@@ -175,7 +228,7 @@
                         <td>11.0</td>
                     </tr>
                     <tr>
-                        <th scope="row">Pluto</th>
+                        <th scope="row">Pluto*</th>
                         <td>0.0130</td>
                         <td>2,390</td>
                         <td>1895</td>
@@ -183,13 +236,16 @@
                     </tr>
                 </tbody>
             </table>
+            <p style="font-size: 0.9rem; color: #555; margin-top: 0.5rem;">
+                * Note: Pluto was reclassified as a dwarf planet by the IAU in 2006 but is included here for historical data comparison.
+            </p>
         </section>
         <hr>
 
         <!-- Form Section -->
         <section id="contact" class="content-section form-section">
             <h2>Have Questions About Planetary Science?</h2>
-            <form action="#" method="POST" class="question-form">
+            <form onsubmit="event.preventDefault(); alert('Thank you! Your question has been submitted.'); this.reset();" class="question-form">
                 <fieldset>
                     <legend>Contact Information</legend>
                     <div>
@@ -198,7 +254,7 @@
                     </div>
                     <div>
                         <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" maxlength="11" required>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9\-\+\s()]+" placeholder="e.g., +1 (123) 456-7890" required>
                     </div>
                     <div>
                         <label for="email">Email</label>
@@ -234,6 +290,11 @@
 
     <!-- Footer Section -->
     <footer class="page-footer">
+        <div style="margin-bottom: 1rem;">
+            <a href="#" aria-label="Facebook" style="text-decoration: none; margin: 0 10px;">🌐 Facebook</a>
+            <a href="#" aria-label="Twitter" style="text-decoration: none; margin: 0 10px;">🐦 Twitter</a>
+            <a href="#" aria-label="LinkedIn" style="text-decoration: none; margin: 0 10px;">💼 LinkedIn</a>
+        </div>
         <ul style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 15px; margin-bottom: 1rem;">
             <li><a href="#">Privacy Policy</a></li>
             <li><a href="#">Terms of Service</a></li>
